@@ -6,6 +6,7 @@
 		width: 100%;
 		height: 40px;
 		line-height: 40px;
+		font-size: 12px;
 	}
 </style>
 <script defer src="{relative_path}/assets/nodebb.min.js?{config.cache-buster}"></script>
