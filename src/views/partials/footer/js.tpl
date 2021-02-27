@@ -25,16 +25,19 @@
 
     window.addEventListener('DOMContentLoaded', function () {
         			const content = document.querySelector('.markdown-content');
-        			const style = content.getBoundingClientRect();
-        			const toc = document.querySelector('.toc');
-        			toc.style.left = (style.right - 200) + 'px';
+        			if(content) {
+        				const style = content.getBoundingClientRect();
+                        const toc = document.querySelector('.toc');
+                        toc.style.left = (style.right - 200) + 'px';
+        			}
         		});
 
     window.addEventListener('resize', function () {
     			const content = document.querySelector('.markdown-content');
-    			const style = content.getBoundingClientRect();
-    			const toc = document.querySelector('.toc');
-    			console.log(style.left, style.right)
-    			toc.style.left = (style.right - 200) + 'px';
+    			if(content) {
+    				const style = content.getBoundingClientRect();
+					const toc = document.querySelector('.toc');
+					toc.style.left = (style.right - 200) + 'px';
+    			}
     		});
 </script>
