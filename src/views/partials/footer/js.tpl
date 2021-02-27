@@ -1,14 +1,3 @@
-<div class=footer>
-	Copyright © 2020 ClouGence, Inc.备案号：<a href='https://beian.miit.gov.cn' target='_blank'>浙ICP备20007605号-2</a>
-</div>
-<style>
-	.footer {
-		width: 100%;
-		height: 40px;
-		line-height: 40px;
-		font-size: 12px;
-	}
-</style>
 <script defer src="{relative_path}/assets/nodebb.min.js?{config.cache-buster}"></script>
 
 
@@ -23,6 +12,7 @@
         prepareFooter();
     }
 
+
     function prepareFooter() {
         <!-- IF useCustomJS -->
         {{customJS}}
@@ -32,4 +22,19 @@
             app.coldLoad();
         });
     }
+
+    window.addEventListener('DOMContentLoaded', function () {
+        			const content = document.querySelector('.markdown-content');
+        			const style = content.getBoundingClientRect();
+        			const toc = document.querySelector('.toc');
+        			toc.style.left = (style.right - 200) + 'px';
+        		});
+
+    window.addEventListener('resize', function () {
+    			const content = document.querySelector('.markdown-content');
+    			const style = content.getBoundingClientRect();
+    			const toc = document.querySelector('.toc');
+    			console.log(style.left, style.right)
+    			toc.style.left = (style.right - 200) + 'px';
+    		});
 </script>
