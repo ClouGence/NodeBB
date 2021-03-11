@@ -106,6 +106,7 @@
     "nodebb-theme-slick": "1.4.3",
     "nodebb-theme-vanilla": "11.4.5",
     "nodebb-widget-essentials": "5.0.3",
+    "nodebb-plugin-sso-wechat-web": "git+https://github.com/ClouGence/nodebb-plugin-sso-wechat-web.git",
     "nodemailer": "^6.4.6",
     "nprogress": "0.2.0",
     "passport": "^0.4.1",
