@@ -39,9 +39,9 @@
 					if(quickReply) {
 						quickReply.style.paddingRight = '200px';
 					}
-					const postBar = document.querySelector('.post-bar');
+					const postBar = document.querySelectorAll('.post-bar');
 					if(postBar) {
-						postBar.style.paddingRight = '200px';
+						postBar[postBar.length-1].style.paddingRight = '200px';
 					}
         		}
     	}, 100)
