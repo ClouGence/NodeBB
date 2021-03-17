@@ -23,21 +23,19 @@
         });
     }
 
-    window.addEventListener('DOMContentLoaded', function () {
-		const content = document.querySelector('.markdown-content');
-		if(content) {
-			const style = content.getBoundingClientRect();
-			const toc = document.querySelector('.toc');
-			toc.style.left = (style.right - 200) + 'px';
-		}
-	});
 
-    window.addEventListener('resize', function () {
-		const content = document.querySelector('.markdown-content');
-		if(content) {
-			const style = content.getBoundingClientRect();
-			const toc = document.querySelector('.toc');
-			toc.style.left = (style.right - 200) + 'px';
-		}
+    window.addEventListener('DOMContentLoaded', function () {
+    	setInterval(() => {
+    	const content = document.querySelector('.markdown-content');
+        		if(content) {
+        			const style = content.getBoundingClientRect();
+        			const toc = document.querySelector('.toc');
+        			toc.style.left = style.right + 'px';
+					const posts = document.querySelector('.posts');
+					if(posts) {
+						posts.style.paddingRight = '200px';
+					}
+        		}
+    	}, 100)
 	});
 </script>
