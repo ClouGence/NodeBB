@@ -35,6 +35,14 @@
 					if(posts) {
 						posts.style.paddingRight = '200px';
 					}
+					const quickReply = document.querySelector('.quick-reply');
+					if(quickReply) {
+						quickReply.style.paddingRight = '200px';
+					}
+					const postBar = document.querySelector('.post-bar');
+					if(postBar) {
+						postBar.style.paddingRight = '200px';
+					}
         		}
     	}, 100)
 	});
